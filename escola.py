@@ -5,7 +5,7 @@ def verificador_media(media:int|float) -> str:
       try:
             if media >= 7: 
                   return "Aprovado"
-            elif media < 5:
+            elif media < 4:
                   return "Reprovado"
             else:
                   return "Recuperação"
@@ -14,6 +14,7 @@ def verificador_media(media:int|float) -> str:
             return ValueError("O numero deve ser entre 0 e 10")
       except(TypeError):
             return ValueError("A média deve ser um número")
+      
 
 
 if __name__ == "__main__":
