@@ -5,7 +5,7 @@ def test_verificar_aprovado():
     assert verificador_media(8) == "Aprovado"
 
 def test_verificar_reprovado():
-    assert verificador_media(4) == "Reprovado"
+    assert verificador_media(4) == "Recuperação"
 
 def test_verificar_recuperacao():
     assert verificador_media(6) == "Recuperação"

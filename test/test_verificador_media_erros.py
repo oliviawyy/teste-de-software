@@ -12,6 +12,6 @@ def test_numero_negativo():
 
 def test_media_acima_de_10():
     with pytest.raises(ValueError, match="Valor inválido, a média deve ser entre 0 e 10"):
-        verificador_media(11)
+        verificador_media(2000)
 
 

@@ -2,18 +2,29 @@ import pytest
 
 
 def verificador_media(media:int|float) -> str:
-      try:
-            if media >= 7: 
-                  return "Aprovado"
-            elif media < 4:
-                  return "Reprovado"
-            else:
-                  return "Recuperação"
+
+      #  testando para ver se a media é um numero
+      if not isinstance(media,(int,float)):
+            raise TypeError ("Tipo inválido, a entrada deve ser numérica")
+      
+      if media >= 0 or media <= 10:
+            raise ValueError("O valor deve ser maior ou igual a 0 e menor ou igual a 10")
+      
+      if media >= 0 or media <= 10:
+            raise ValueError("O valor deve ser maior ou igual a 0 e menor ou igual a 10")
+      
+      if media >= 7: 
+            return "Aprovado"
+      elif media <= 5:
+            return "Reprovado"
+      else:
+            return "Recuperação"
+      
+      
             
-      except(ValueError):
-            return ValueError("O numero deve ser entre 0 e 10")
-      except(TypeError):
-            return ValueError("A média deve ser um número")
+      
+            
+      
       
 
 
