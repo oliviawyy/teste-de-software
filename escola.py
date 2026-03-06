@@ -7,15 +7,15 @@ def verificador_media(media:int|float) -> str:
       if not isinstance(media,(int,float)):
             raise TypeError ("Tipo inválido, a entrada deve ser numérica")
       
-      if media >= 0 or media <= 10:
-            raise ValueError("O valor deve ser maior ou igual a 0 e menor ou igual a 10")
+      if media < 0:
+            raise ValueError("Valor inválido, a média não pode ser negativa")
       
-      if media >= 0 or media <= 10:
-            raise ValueError("O valor deve ser maior ou igual a 0 e menor ou igual a 10")
+      if media > 10:
+            raise ValueError("Valor inválido, a média deve ser entre 0 e 10")
       
       if media >= 7: 
             return "Aprovado"
-      elif media <= 5:
+      elif media <= 4:
             return "Reprovado"
       else:
             return "Recuperação"
